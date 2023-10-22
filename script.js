@@ -13,14 +13,25 @@ function validation () {
   let notNum1 = isNaN(input1.value)
   let notNum2 = isNaN(input2.value)
 
+  let removeStyle1 = input1.style.border = 'none'
+  let removeStyle2 = input2.style.border = 'none'
+
   if (notNum1 || notNum2) {
     invalid.style.display = 'block'
-    input1.style.border = '1px solid red'
-    input2.style.border = '1px solid red'
+    if (notNum1) {
+      input1.style.border = '1px solid red'
+    }else {
+      removeStyle1
+    }
+    if (notNum2) {
+      input2.style.border = '1px solid red'
+    }else {
+      removeStyle2
+    }
   } else {
     invalid.style.display = 'none'
-    input1.style.border = 'none'
-    input2.style.border = 'none'
+    removeStyle1
+    removeStyle2
   }
 }
 
