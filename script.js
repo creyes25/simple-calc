@@ -8,7 +8,7 @@ const multiply = document.querySelector('.multiply')
 const results = document.querySelector('.results-display')
 
 
-
+// checks if input is not a number
 function validation () {
   let notNum1 = isNaN(input1.value)
   let notNum2 = isNaN(input2.value)
@@ -37,11 +37,13 @@ function validation () {
 
 
 function equation(type) {
+  // checks to see if invalid input is showing
   if (invalid.getAttribute('style') === 'display: block;') {
     results.innerHTML = 0
     return
   }
 
+  // makes string into num
   const num1 = parseInt(input1.value)
   const num2 = parseInt(input2.value)
 
