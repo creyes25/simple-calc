@@ -8,21 +8,21 @@
   <title>Simple Calculator</title>
 </head>
 <body>
-  <section class="calculator">
+  <section class="calculator flex">
     <h2>Simple Calculator</h2>
-    <div class="inputs">
+    <div class="inputs flex justify-content">
       <input type="text" id="num-1">
       <input type="text" id="num-2">
-      <h2 class="wrong"></h2>
     </div>
-    <div class="calculations">
-      <button class="add">➕</button>
-      <button class="minus">➖</button>
-      <button class="divide">➗</button>
-      <button class="multiply">✖️</button>
+    <h3 class="invalid" hidden>Invalid: Input number</h3>
+    <div class="operators flex justify-content">
+      <button class="add flex justify-content">➕</button>
+      <button class="minus flex justify-content">➖</button>
+      <button class="divide flex justify-content">➗</button>
+      <button class="multiply flex justify-content">✖️</button>
     </div>
     <div class="results">
-      <h2 class="results-display">0</h2>
+      <h1 class="results-display">0</h1>
     </div>
   </section>
 </body>

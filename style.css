@@ -1,0 +1,70 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.calculator {
+  width: 500px;
+  height: 500px;
+  margin: 30vh auto;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.calculator h2:first-child {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.inputs {
+  margin-bottom: 1em;
+  width: 70%;
+  gap: 10px;
+
+}
+
+input {
+  width: 30%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.invalid {
+  text-align: center;
+  margin: 15px 0 5px;
+}
+
+.operators {
+  margin-top: 2em;
+  width: 70%;
+  gap: 10px;
+}
+
+button {
+  width: 16%;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.results {
+  margin-top: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.results-display {
+  font-size: 55px;
+}
