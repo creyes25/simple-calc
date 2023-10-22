@@ -15,8 +15,12 @@ function validation () {
 
   if (notNum1 || notNum2) {
     invalid.style.display = 'block'
+    input1.style.border = '1px solid red'
+    input2.style.border = '1px solid red'
   } else {
     invalid.style.display = 'none'
+    input1.style.border = 'none'
+    input2.style.border = 'none'
   }
 }
 
@@ -39,7 +43,7 @@ function equation(type) {
   } 
 
   if (type === 'divide') {
-    results.innerHTML = num1 / num2
+    results.innerHTML = (num1 / num2).toFixed(2)
   } 
   if (type === 'multiply') {
     results.innerHTML = num1 * num2
