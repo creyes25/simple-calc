@@ -39,6 +39,9 @@ input {
   height: 20px;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .invalid {
