@@ -7,31 +7,31 @@ const division = document.querySelector('.divide')
 const multiply = document.querySelector('.multiply')
 const results = document.querySelector('.results-display')
 
+const arrBtns = [addition, minus, division, multiply]
+
 
 // checks if input is not a number
 function validation () {
-  let notNum1 = isNaN(input1.value)
-  let notNum2 = isNaN(input2.value)
-
-  let removeStyle1 = input1.style.border = 'none'
-  let removeStyle2 = input2.style.border = 'none'
+  const notNum1 = isNaN(input1.value)
+  const notNum2 = isNaN(input2.value)
 
   if (notNum1 || notNum2) {
     invalid.style.display = 'block'
     if (notNum1) {
       input1.style.border = '1px solid red'
     }else {
-      removeStyle1
+      input1.style.border = 'none'
     }
     if (notNum2) {
       input2.style.border = '1px solid red'
     }else {
-      removeStyle2
+      input2.style.border = 'none'
     }
   } else {
     invalid.style.display = 'none'
-    removeStyle1
-    removeStyle2
+    input1.style.border = 'none'
+    input2.style.border = 'none'
+
   }
 }
 
@@ -64,23 +64,31 @@ function equation(type) {
 
 }
 
-addition.addEventListener('click', () => {
-  validation()
-  equation('add')
-})
+// addition.addEventListener('click', () => {
+//   validation()
+//   equation('add')
+// })
 
-minus.addEventListener('click', () => {
-  validation()
-  equation('minus')
-})
+// minus.addEventListener('click', () => {
+//   validation()
+//   equation('minus')
+// })
 
-division.addEventListener('click', () => {
-  validation()
-  equation('divide')
-})
+// division.addEventListener('click', () => {
+//   validation()
+//   equation('divide')
+// })
 
-multiply.addEventListener('click', () => {
-  validation()
-  equation('multiply')
+// multiply.addEventListener('click', () => {
+//   validation()
+//   equation('multiply')
+// })
+
+
+arrBtns.forEach(button => {
+  button.addEventListener('click', () => {
+    validation()
+    equation(button.classList[0])
+  } )
 })
 
